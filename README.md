@@ -29,7 +29,8 @@ Ce projet a été réalisé dans le cadre d'un partiel de développement web en 
 
 - **Votre code est valide W3C** (les badges "infos" sont autorisés) : **+1 pt**
 
-  - _En cours_
+  ![validation W3C du HTML](W3C-html.png)
+  ![validation W3C du CSS](W3C-CSS.png)
 
 - **Vous avez utilisé JavaScript pour gérer** : un menu mobile, un mode _light/dark_, ou une popup qui s'ouvre au clic sur un bouton (ex. "Sign Up") : **+2 pts**
   - _En cours_
