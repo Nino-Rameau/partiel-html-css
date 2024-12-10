@@ -8,11 +8,15 @@
   --color-principal: #4caf4f;
   --color-btn-header: #18191f;
   --color-fond-footer: #263238;
+  --color-sous-titre: #4d4d4d;
+  --color-text: #717171;
 
   /* nom typo */
 
   /* taille typo */
-  --font-size: 16px;
+  --font-size-text: 16px;
+  --font-size-sous-titre: 36px;
+  --font-size-titre: 64px;
 }
 
 /* -----------------------------------
@@ -22,6 +26,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  margin: auto;
 }
 
 a {
@@ -35,6 +40,9 @@ a {
 body {
   background-color: var(--color-white);
   font-family: "inter", "sans-serif";
+  font-size: var(--font-size-text);
+  font-weight: 400;
+  color: var(--color-text);
 }
 
 /* -----------------------------------
@@ -52,7 +60,6 @@ nav {
   display: flex;
   gap: 50px;
   color: var(--color-btn-header);
-  font-size: var(--font-size);
 }
 
 .login {
@@ -72,6 +79,50 @@ nav {
             ELT MAIN
 ------------------------------------*/
 
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 96px 144px;
+  gap: 104px;
+  margin: auto;
+}
+
+.inverser {
+  flex-direction: row-reverse;
+}
+
+.carte-x3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 144px;
+  padding-right: 144px;
+  align-items: center;
+}
+
+.carte {
+  padding: 24px 32px;
+  border-radius: 8px;
+  gap: 8px;
+  max-width: 33%;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0px 2px 4px 0px #abbed133;
+  max-width: 300px;
+}
+
+.test {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  border-radius: 8px;
+  text-align: center;
+  height: 364px;
+  width: 1200px;
+  margin: auto;
+  margin-bottom: 42px;
+}
+
 /* -----------------------------------
             ELT FOOTER
 ------------------------------------*/
@@ -81,4 +132,45 @@ footer {
   padding: 64px 165px;
   color: white;
   text-align: center;
+}
+
+/* -----------------------------------
+            ELT
+------------------------------------*/
+
+h1 {
+  font-size: var(--font-size-titre);
+  font-weight: 600;
+  color: black;
+}
+
+h2 {
+  font-size: var(--font-size-sous-titre);
+  font-weight: 600;
+  color: var(--color-sous-titre);
+}
+
+.centre {
+  text-align: center;
+}
+
+span {
+  font-size: var(--font-size-titre);
+  color: var(--color-principal);
+}
+
+.bouton {
+  background-color: var(--color-principal);
+  padding: 14px 32px;
+  border-radius: 4px;
+  color: white;
+}
+
+.col-neutr {
+  background-color: var(--color-neutral);
+}
+
+.margin {
+  margin-left: 151px;
+  margin-right: 151px;
 }
