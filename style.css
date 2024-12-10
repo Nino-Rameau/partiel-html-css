@@ -1,0 +1,84 @@
+/* -----------------------------------
+            VARIABLES
+------------------------------------*/
+:root {
+  /* couleur */
+  --color-neutral: #f5f7fa;
+  --color-white: white;
+  --color-principal: #4caf4f;
+  --color-btn-header: #18191f;
+  --color-fond-footer: #263238;
+
+  /* nom typo */
+
+  /* taille typo */
+  --font-size: 16px;
+}
+
+/* -----------------------------------
+            RESET
+------------------------------------*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* -----------------------------------
+            ELT BASES
+------------------------------------*/
+body {
+  background-color: var(--color-white);
+  font-family: "inter", "sans-serif";
+}
+
+/* -----------------------------------
+            ELT HEADER
+------------------------------------*/
+header {
+  background-color: var(--color-neutral);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 22px 105px;
+}
+
+nav {
+  display: flex;
+  gap: 50px;
+  color: var(--color-btn-header);
+  font-size: var(--font-size);
+}
+
+.login {
+  color: var(--color-principal);
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.sign-up {
+  background-color: var(--color-principal);
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* -----------------------------------
+            ELT MAIN
+------------------------------------*/
+
+/* -----------------------------------
+            ELT FOOTER
+------------------------------------*/
+
+footer {
+  background-color: var(--color-fond-footer);
+  padding: 64px 165px;
+  color: white;
+  text-align: center;
+}
