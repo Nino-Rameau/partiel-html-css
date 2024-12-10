@@ -5,6 +5,7 @@
   /* couleur */
   --color-neutral: #f5f7fa;
   --color-white: white;
+  --color-black: black;
   --color-principal: #4caf4f;
   --color-btn-header: #18191f;
   --color-fond-footer: #263238;
@@ -31,7 +32,6 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 /* -----------------------------------
@@ -45,6 +45,10 @@ body {
   color: var(--color-text);
 }
 
+body.ClairSombre {
+  background-color: black;
+}
+
 /* -----------------------------------
             ELT HEADER
 ------------------------------------*/
@@ -52,14 +56,26 @@ header {
   background-color: var(--color-neutral);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 22px 105px;
+}
+
+body.ClairSombre header {
+  background-color: var(--color-black);
+  border-bottom: 1px solid white;
 }
 
 nav {
   display: flex;
   gap: 50px;
+}
+
+nav a {
   color: var(--color-btn-header);
+}
+
+body.ClairSombre nav a {
+  color: var(--color-white);
 }
 
 .login {
@@ -72,7 +88,12 @@ nav {
   background-color: var(--color-principal);
   padding: 10px 20px;
   border-radius: 6px;
-  color: white;
+  color: var(--color-white);
+}
+
+.img-clair-sombre {
+  width: 45px;
+  cursor: pointer;
 }
 
 /* -----------------------------------
@@ -88,6 +109,10 @@ nav {
   margin: auto;
 }
 
+body.ClairSombre .container {
+  background-color: var(--color-black);
+}
+
 .inverser {
   flex-direction: row-reverse;
 }
@@ -95,9 +120,7 @@ nav {
 .carte-x3 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-left: 144px;
-  padding-right: 144px;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -106,13 +129,18 @@ nav {
   border-radius: 8px;
   gap: 8px;
   max-width: 33%;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   text-align: center;
   box-shadow: 0px 2px 4px 0px #abbed133;
   max-width: 300px;
+  border: 1px solid white;
 }
 
-.test {
+body.ClairSombre .carte {
+  background-color: var(--color-black);
+}
+
+.carte-fin {
   padding-top: 64px;
   padding-bottom: 64px;
   border-radius: 8px;
@@ -123,6 +151,11 @@ nav {
   margin-bottom: 42px;
 }
 
+body.ClairSombre .carte-fin {
+  background-color: var(--color-black);
+  border: 1px solid white;
+}
+
 /* -----------------------------------
             ELT FOOTER
 ------------------------------------*/
@@ -130,7 +163,7 @@ nav {
 footer {
   background-color: var(--color-fond-footer);
   padding: 64px 165px;
-  color: white;
+  color: var(--color-white);
   text-align: center;
 }
 
@@ -141,7 +174,11 @@ footer {
 h1 {
   font-size: var(--font-size-titre);
   font-weight: 600;
-  color: black;
+  color: var(--color-black);
+}
+
+body.ClairSombre h1 {
+  color: var(--color-white);
 }
 
 h2 {
@@ -163,14 +200,9 @@ span {
   background-color: var(--color-principal);
   padding: 14px 32px;
   border-radius: 4px;
-  color: white;
+  color: var(--color-white);
 }
 
 .col-neutr {
   background-color: var(--color-neutral);
-}
-
-.margin {
-  margin-left: 151px;
-  margin-right: 151px;
 }
