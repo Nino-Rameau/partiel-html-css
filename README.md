@@ -21,7 +21,7 @@ Ce projet a été réalisé dans le cadre d'un partiel de développement web en 
 
 - **Adaptation responsive bien réalisée avec une approche mobile-first** : **+1 pt**
 
-  - _Non réalisé_
+  - Réalisée via un menu burger sur mobile et une interface adaptée.
 
 - **Votre page est déployée en ligne avec GitHub Pages** : **+1 pt**
 
@@ -37,8 +37,8 @@ Ce projet a été réalisé dans le cadre d'un partiel de développement web en 
 
     ![validation W3C du CSS](W3C-css.png)
 
-- **Vous avez utilisé JavaScript pour gérer** : un menu mobile, un mode _light/dark_, ou une popup qui s'ouvre au clic sur un bouton (ex. "Sign Up") : **+2 pts**
-  - Réalisé
+- **Vous avez utilisé JavaScript pour gérer** : un menu mobile, un mode light/dark ou une popup qui s'ouvre au clic sur un bouton (ex. "Sign Up") : **+2 pts**
+  - Réalisé via le soleil situé dans le header
 
 ## Aperçu de la maquette
 

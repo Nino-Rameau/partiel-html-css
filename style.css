@@ -13,6 +13,7 @@
   --color-text: #717171;
 
   /* nom typo */
+  --font-family-principal: "inter", "sans-serif";
 
   /* taille typo */
   --font-size-text: 16px;
@@ -39,7 +40,7 @@ a {
 ------------------------------------*/
 body {
   background-color: var(--color-white);
-  font-family: "inter", "sans-serif";
+  font-family: var(--font-family-principal);
   font-size: var(--font-size-text);
   font-weight: 400;
   color: var(--color-text);
@@ -56,8 +57,10 @@ header {
   background-color: var(--color-neutral);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 22px 105px;
+  align-items: center;
 }
 
 body.ClairSombre header {
@@ -68,6 +71,10 @@ body.ClairSombre header {
 nav {
   display: flex;
   gap: 50px;
+}
+
+.connexion {
+  display: flex;
 }
 
 nav a {
@@ -94,34 +101,15 @@ body.ClairSombre nav a {
 .img-clair-sombre {
   width: 45px;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 /* -----------------------------------
             ELT MAIN
 ------------------------------------*/
 
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 96px 144px;
-  gap: 104px;
-  margin: auto;
-}
-
 body.ClairSombre .container {
   background-color: var(--color-black);
-}
-
-.inverser {
-  flex-direction: row-reverse;
-}
-
-.carte-x3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .carte {
@@ -145,8 +133,8 @@ body.ClairSombre .carte {
   padding-bottom: 64px;
   border-radius: 8px;
   text-align: center;
-  height: 364px;
-  width: 1200px;
+  height: 20%;
+  width: 75%;
   margin: auto;
   margin-bottom: 42px;
 }
@@ -154,6 +142,28 @@ body.ClairSombre .carte {
 body.ClairSombre .carte-fin {
   background-color: var(--color-black);
   border: 1px solid white;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 96px 144px;
+    gap: 104px;
+    margin: auto;
+  }
+
+  .inverser {
+    flex-direction: row-reverse;
+  }
+
+  .carte-x3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 /* -----------------------------------
@@ -174,7 +184,7 @@ footer {
 h1 {
   font-size: var(--font-size-titre);
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--color-sous-titre);
 }
 
 body.ClairSombre h1 {
@@ -191,9 +201,10 @@ h2 {
   text-align: center;
 }
 
-span {
+.cl-vert {
   font-size: var(--font-size-titre);
   color: var(--color-principal);
+  margin-top: 0;
 }
 
 .bouton {
@@ -205,4 +216,16 @@ span {
 
 .col-neutr {
   background-color: var(--color-neutral);
+}
+
+.elt h1 {
+  margin-bottom: 0px;
+}
+
+.elt p {
+  margin-bottom: 64px;
+}
+
+.largeur-elt-para {
+  width: 661px;
 }
