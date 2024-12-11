@@ -21,7 +21,7 @@ Ce projet a été réalisé dans le cadre d'un partiel de développement web en 
 
 - **Adaptation responsive bien réalisée avec une approche mobile-first** : **+1 pt**
 
-  - Réalisée via un menu burger sur mobile et une interface adaptée.
+  - Réalisée via un menu burger.
 
 - **Votre page est déployée en ligne avec GitHub Pages** : **+1 pt**
 

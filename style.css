@@ -18,7 +18,9 @@
   /* taille typo */
   --font-size-text: 16px;
   --font-size-sous-titre: 36px;
+  --font-size-sous-titre-mobile: 25px;
   --font-size-titre: 64px;
+  --font-size-titre-mobile: 45px;
 }
 
 /* -----------------------------------
@@ -28,7 +30,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  margin: auto;
 }
 
 a {
@@ -53,6 +54,7 @@ body.ClairSombre {
 /* -----------------------------------
             ELT HEADER
 ------------------------------------*/
+
 header {
   background-color: var(--color-neutral);
   display: flex;
@@ -104,6 +106,33 @@ body.ClairSombre nav a {
   margin-left: 20px;
 }
 
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    background: var(--color-neutral);
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    right: -100%;
+  }
+
+  nav.menu-open {
+    right: 0;
+    top: 0;
+  }
+}
+
+.menu {
+  display: block;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
 /* -----------------------------------
             ELT MAIN
 ------------------------------------*/
@@ -144,7 +173,7 @@ body.ClairSombre .carte-fin {
   border: 1px solid white;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .container {
     display: flex;
     flex-direction: row;
@@ -228,4 +257,14 @@ h2 {
 
 .largeur-elt-para {
   width: 661px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-titre-mobile);
+  }
+
+  h2 {
+    font-size: var(--font-size-sous-titre-mobile);
+  }
 }

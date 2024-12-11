@@ -10,6 +10,18 @@ function toggleDarkMode() {
   }
 }
 
+function toggleMobileNav() {
+  const buttonAction = document.querySelector(".menu");
+  const navMain = document.querySelector("nav");
+
+  if (buttonAction) {
+    buttonAction.addEventListener("click", function () {
+      navMain.classList.toggle("menu-open");
+    });
+  }
+}
+
 window.addEventListener("DOMContentLoaded", function () {
   toggleDarkMode();
+  toggleMobileNav();
 });
