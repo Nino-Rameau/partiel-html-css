@@ -58,68 +58,10 @@ body.ClairSombre {
 header {
   background-color: var(--color-neutral);
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 22px 105px;
-  align-items: center;
-}
-
-body.ClairSombre header {
-  background-color: var(--color-black);
-  border-bottom: 1px solid white;
-}
-
-nav {
-  display: flex;
-  gap: 50px;
-}
-
-.connexion {
-  display: flex;
-}
-
-nav a {
-  color: var(--color-btn-header);
-}
-
-body.ClairSombre nav a {
-  color: var(--color-white);
-}
-
-.login {
-  color: var(--color-principal);
-  padding: 10px 20px;
-  border-radius: 6px;
-}
-
-.sign-up {
-  background-color: var(--color-principal);
-  padding: 10px 20px;
-  border-radius: 6px;
-  color: var(--color-white);
-}
-
-.img-clair-sombre {
-  width: 45px;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-@media (max-width: 768px) {
-  nav {
-    position: absolute;
-    background: var(--color-neutral);
-    display: flex;
-    flex-direction: column;
-    top: 70px;
-    right: -100%;
-  }
-
-  nav.menu-open {
-    right: 0;
-    top: 0;
-  }
+  position: sticky;
+  top: 0;
+  padding-top: 8px;
 }
 
 .menu {
@@ -127,10 +69,127 @@ body.ClairSombre nav a {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+body.ClairSombre header {
+  background-color: var(--color-black);
+}
+
+nav {
+  position: absolute;
+  background: var(--color-neutral);
+  display: flex;
+  flex-direction: column;
+  top: 70px;
+  right: -100%;
+}
+
+nav.menu-open {
+  display: flex;
+  top: 80px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  opacity: 80%;
+}
+
+nav.menu-open a {
+  border-top: black solid 1px;
+  background-color: var(--color-white);
+  padding-bottom: 8px;
+}
+
+nav a {
+  color: var(--color-btn-header);
+}
+
+body.ClairSombre nav.menu-open a {
+  border-top: white solid 1px;
+  background-color: var(--color-black);
+}
+
+body.ClairSombre nav a {
+  color: var(--color-white);
+}
+
+/* btn login / sign up */
+
+.connexion {
+  display: flex;
+}
+
+.login,
+.sign-up {
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.login {
+  color: var(--color-principal);
+}
+
+.sign-up {
+  background-color: var(--color-principal);
+  color: var(--color-white);
+}
+
+/* format pc  */
+
+@media (min-width: 1024px) {
   .menu {
     display: none;
   }
+  .login,
+  .sign-up {
+    padding: 10px 20px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1.3rem 5rem;
+    border-bottom: white solid 1px;
+  }
+
+  nav {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px;
+  }
+  body.ClairSombre nav {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
+/* changement entre img soleil et lune pour mode clair / sombre */
+
+.soleil,
+.lune {
+  cursor: pointer;
+  margin-left: 20px;
+  color: var(--color-black);
+}
+
+.soleil {
+  display: block;
+}
+
+.lune {
+  display: none;
+}
+
+body.ClairSombre .soleil {
+  display: none;
+}
+
+body.ClairSombre .lune {
+  display: block;
+  color: var(--color-white);
 }
 
 /* -----------------------------------
@@ -139,6 +198,15 @@ body.ClairSombre nav a {
 
 body.ClairSombre .container {
   background-color: var(--color-black);
+}
+
+.carte-x3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
 }
 
 .carte {
@@ -172,25 +240,32 @@ body.ClairSombre .carte-fin {
   border: 1px solid white;
 }
 
-@media screen and (min-width: 768px) {
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 25px 60px;
+
+  margin: auto;
+}
+
+.elt {
+  min-width: 100px;
+}
+
+.inverser {
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 1024px) {
   .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 96px 144px;
+    flex-wrap: nowrap;
     gap: 104px;
-    margin: auto;
   }
-
-  .inverser {
-    flex-direction: row-reverse;
-  }
-
-  .carte-x3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  .elt {
+    min-width: 200px;
   }
 }
 
@@ -206,7 +281,7 @@ footer {
 }
 
 /* -----------------------------------
-            ELT
+                ELT
 ------------------------------------*/
 
 h1 {
@@ -254,8 +329,9 @@ h2 {
   margin-bottom: 64px;
 }
 
-.largeur-elt-para {
+.largeur-elt-texte {
   width: 661px;
+  margin-left: 49px;
 }
 
 @media (max-width: 768px) {
