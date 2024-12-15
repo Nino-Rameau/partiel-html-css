@@ -38,7 +38,7 @@ Ce projet a été réalisé dans le cadre d'un partiel de développement web en 
     ![validation W3C du CSS](W3C-css.png)
 
 - **Vous avez utilisé JavaScript pour gérer** : un menu mobile, un mode light/dark ou une popup qui s'ouvre au clic sur un bouton (ex. "Sign Up") : **+2 pts**
-  - Réalisé via le soleil situé dans le header
+  - Réalisé via le soleil situé dans le header et le menu burger
 
 ## Aperçu de la maquette
 
