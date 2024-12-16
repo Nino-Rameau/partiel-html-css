@@ -151,8 +151,9 @@ body.ClairSombre nav a {
     align-items: center;
     padding: 1.3rem 5rem;
     border-bottom: white solid 1px;
+    max-width: 1700px;
+    margin: auto;
   }
-
   nav {
     position: static;
     display: flex;
@@ -254,8 +255,10 @@ body.ClairSombre .carte-fin {
   min-width: 100px;
 }
 
-.image {
-  min-width: 300px;
+@media (max-width: 720px) {
+  .image {
+    max-width: 300px;
+  }
 }
 
 .inverser {
@@ -267,7 +270,10 @@ body.ClairSombre .carte-fin {
     padding: 96px 144px;
     flex-wrap: nowrap;
     gap: 104px;
-    max-width: 1500px;
+    max-width: 1700px;
+  }
+  .carte-x3 {
+    max-width: 1700px;
   }
   .elt,
   image {
