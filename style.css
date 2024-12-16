@@ -246,12 +246,16 @@ body.ClairSombre .carte-fin {
   flex-wrap: wrap;
   align-items: center;
   padding: 25px 60px;
-
   margin: auto;
+  overflow: visible;
 }
 
 .elt {
   min-width: 100px;
+}
+
+.image {
+  min-width: 300px;
 }
 
 .inverser {
@@ -263,9 +267,11 @@ body.ClairSombre .carte-fin {
     padding: 96px 144px;
     flex-wrap: nowrap;
     gap: 104px;
+    max-width: 1500px;
   }
-  .elt {
-    min-width: 200px;
+  .elt,
+  image {
+    min-width: 450px;
   }
 }
 
